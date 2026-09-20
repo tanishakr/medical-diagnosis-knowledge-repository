@@ -1,0 +1,18 @@
+{
+  "domain": "Symptom-Based Medical Diagnosis",
+  "category": "Entities and Relationships",
+  "entities": {
+    "Patient": ["patient_id", "name", "age", "gender", "reported_symptoms[]", "visit_date"],
+    "Symptom": ["symptom_id", "name", "category", "severity", "duration"],
+    "Disease": ["disease_id", "name", "associated_symptoms[]", "severity_level", "contagious"],
+    "Precaution": ["precaution_id", "description", "applicable_disease", "urgency_level", "source"],
+    "Rule": ["rule_id", "if_condition", "then_conclusion", "confidence_weight", "priority"]
+  },
+  "relationships": [
+    {"from": "Patient", "relation": "reports", "to": "Symptom", "type": "many-to-many"},
+    {"from": "Disease", "relation": "characterized_by", "to": "Symptom", "type": "many-to-many"},
+    {"from": "Disease", "relation": "requires", "to": "Precaution", "type": "one-to-many"},
+    {"from": "Rule", "relation": "concludes", "to": "Disease", "type": "many-to-one"},
+    {"from": "Rule", "relation": "tests", "to": "Symptom", "type": "many-to-many"}
+  ]
+}

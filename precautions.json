@@ -1,0 +1,15 @@
+{
+  "domain": "Symptom-Based Medical Diagnosis",
+  "category": "Precautions",
+  "precautions": {
+    "COVID-19": "Isolate, monitor oxygen levels, consult a doctor if breathless.",
+    "Common Cold": "Rest, fluids, steam inhalation.",
+    "Malaria": "Consult a doctor for a blood test; avoid mosquito exposure.",
+    "Typhoid": "Consult a doctor; maintain hydration and hygiene.",
+    "Dengue": "Consult a doctor immediately; avoid aspirin/NSAIDs.",
+    "Migraine": "Rest in a dark room; avoid triggers; consult a doctor if frequent.",
+    "Allergy": "Avoid the allergen; antihistamines if advised by a doctor.",
+    "Pneumonia": "Seek medical attention promptly; monitor breathing.",
+    "Flu / Influenza": "Rest, fluids, consult a doctor if symptoms worsen."
+  }
+}

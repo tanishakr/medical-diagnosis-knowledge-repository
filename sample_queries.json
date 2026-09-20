@@ -1,0 +1,29 @@
+{
+  "domain": "Symptom-Based Medical Diagnosis",
+  "category": "Sample Queries and Expected Results",
+  "queries": [
+    {"query_id": "Q1",
+     "symptoms": ["fever", "cough", "fatigue", "loss_of_taste_or_smell", "body_ache"],
+     "expected_top": "COVID-19",
+     "ranked_results": ["COVID-19 (1.0)", "Flu / Influenza (0.6)",
+                        "Common Cold (0.5)", "Pneumonia (0.5)"]},
+    {"query_id": "Q2",
+     "symptoms": ["throbbing_headache", "nausea", "sensitivity_to_light", "no_fever"],
+     "expected_top": "Migraine",
+     "ranked_results": ["Migraine (1.0)"]},
+    {"query_id": "Q3",
+     "symptoms": ["fever", "headache", "chills"],
+     "expected_top": "Flu / Influenza",
+     "ranked_results": ["Flu / Influenza (0.6)"],
+     "note": "Malaria is excluded (0.4) because its rule needs high_fever, not fever."},
+    {"query_id": "Q4",
+     "symptoms": ["sneezing", "runny_nose", "itchy_eyes", "no_fever"],
+     "expected_top": "Allergy",
+     "ranked_results": ["Allergy (1.0)"]},
+    {"query_id": "Q5",
+     "symptoms": ["stomach_ache", "dizziness"],
+     "expected_top": null,
+     "ranked_results": [],
+     "note": "No rule reaches the 0.5 threshold, so no diagnosis is forced."}
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "domain": "Symptom-Based Medical Diagnosis",
+  "category": "Diagnosis Rules",
+  "min_confidence_threshold": 0.5,
+  "rules": [
+    {"rule_id": "R1", "then": "COVID-19",
+     "if": ["fever", "cough", "fatigue", "loss_of_taste_or_smell"]},
+    {"rule_id": "R2", "then": "Common Cold",
+     "if": ["fever", "cough", "sore_throat", "runny_nose"]},
+    {"rule_id": "R3", "then": "Malaria",
+     "if": ["high_fever", "chills", "sweating", "headache", "vomiting"]},
+    {"rule_id": "R4", "then": "Typhoid",
+     "if": ["fever", "headache", "abdominal_pain", "weakness", "loss_of_appetite"]},
+    {"rule_id": "R5", "then": "Dengue",
+     "if": ["high_fever", "severe_headache", "joint_pain", "skin_rash", "eye_pain"]},
+    {"rule_id": "R6", "then": "Migraine",
+     "if": ["throbbing_headache", "nausea", "sensitivity_to_light", "no_fever"]},
+    {"rule_id": "R7", "then": "Allergy",
+     "if": ["sneezing", "runny_nose", "itchy_eyes", "no_fever"]},
+    {"rule_id": "R8", "then": "Pneumonia",
+     "if": ["cough", "fever", "breathlessness", "chest_pain"]},
+    {"rule_id": "R9", "then": "Flu / Influenza",
+     "if": ["fever", "body_ache", "chills", "headache", "fatigue"]}
+  ]
+}
